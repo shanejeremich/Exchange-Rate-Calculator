@@ -4,9 +4,6 @@
 
 * {
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 body {
@@ -68,7 +65,7 @@ p {
   border: 0;
   background: transparent;
   font-size: 30px;
-  text-align: center;
+  text-align: right;
 }
 
 .swap-rate-container {
@@ -91,6 +88,6 @@ button:focus {
 
 @media (max-width: 600px) {
   .currency input {
-    width: 100%;
+    width: 200px;
   }
 }
