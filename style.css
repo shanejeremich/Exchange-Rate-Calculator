@@ -68,6 +68,11 @@ p {
   text-align: right;
 }
 
+/* Firefox remove the red border */
+input:invalid {
+  box-shadow: none;
+}
+
 .swap-rate-container {
   display: flex;
   align-items: center;
