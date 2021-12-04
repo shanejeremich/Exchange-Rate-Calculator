@@ -6,18 +6,17 @@ const amountEl_two = document.getElementById("amount-two");
 const rateEl = document.getElementById("rate");
 const swap = document.getElementById("swap");
 
-const URL = `https://v6.exchangerate-api.com/v6/5344512c85e73f068cedccb0/latest/`;
-
 // Fetch exchange rates & update the DOM
 function calculate() {
   const currency_one = currencyEl_one.value;
   const currency_two = currencyEl_two.value;
+  const URL = `https://api.exchangerate-api.com/v4/latest/`;
 
   fetch(`${URL}${currency_one}`)
     .then(res => res.json())
     .then(data => {
       // console.log(data);
-      const rate = data.conversion_rates[currency_two];
+      const rate = data.rates[currency_two];
 
       rateEl.innerHTML = `1 ${currency_one} = ${rate} ${currency_two}`;
 
